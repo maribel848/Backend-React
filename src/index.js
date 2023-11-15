@@ -1,12 +1,5 @@
-const express = require('express')
+const app=require("./app")
 const config = require("./config")
-const app = express()
-
-const users = []
-
-app.get('/', function (req, res) {
-  res.send('Hello World 102')
-})
 
 app.listen(config.port,()=>{
     console.log(`servicio procesando en puerto ${config.port}`)
