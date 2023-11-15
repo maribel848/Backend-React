@@ -2,7 +2,7 @@ const express = require('express')
 const config = require("./config")
 const app = express()
 
-
+const users = []
 
 app.get('/', function (req, res) {
   res.send('Hello World 102')
