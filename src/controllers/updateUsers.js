@@ -1,2 +1,5 @@
-app.put("/user/:id",(req,res)=>{})
-module.exports=updateUsers;
+const updateUser = (req,res) => {
+
+}
+module.exports = updateUser;
+

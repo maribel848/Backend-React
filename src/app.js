@@ -4,18 +4,21 @@ const app = express()
 //modularizar, llamar archivo para que funcione con el principal
 const register=require("./controllers/register")
 const login=require("./controllers/login")
-const updateUser=require("./controllers/updateUser")
+const updateUsers=require("./controllers/updateUsers")
 const getUser=require("./controllers/getUser")
-
-
+const {getAllusers} = require("./dv");
 app.use(morgan("dev"))
-const users = [];
+app.use(express.json());
+
+app.get("/users", (req, res) => {
+    res.json({ users: getAllusers() });
+ });
 //registre
 app.post("/register",register)
 //login
 app.post("/login",login)
 //update user
-app.put("/user/:id",updateUser)
+app.put("/user/:id",updateUsers)
 //get user
 app.get("/user/:id",getUser)
 

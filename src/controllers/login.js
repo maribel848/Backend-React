@@ -1,2 +1,5 @@
-app.post("/login",(req,res)=>{})
-module.exports=login;
+const login = (req,res) => {
+
+}
+module.exports = login;
+
